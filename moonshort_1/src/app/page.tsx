@@ -1,7 +1,9 @@
 import { Checkbox } from "@/components/Input";
-// import VerificationForm from "@/components/Verification";
+import { getItems } from "@/utils/api";
 
 export default function Home() {
+  const data = getItems();
+  console.log(data);
   return (
     <main className="form-height flex flex-col items-center justify-center">
       <div className="flex h-[658px] w-[576px] flex-col   gap-8  rounded-[20px] border border-[#C1C1C1] px-[60px] ">

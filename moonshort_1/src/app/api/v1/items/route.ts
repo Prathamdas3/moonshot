@@ -1,6 +1,6 @@
 import { db } from "@/server/db";
 import { NextResponse } from "next/server";
-import { itemSchema } from "@/utils/zodSchema";
+import { data } from "@/utils/faker";
 
 export async function GET() {
   try {
@@ -11,17 +11,14 @@ export async function GET() {
   }
 }
 
-export async function POST(req: Request) {
-  try {
-    const body = await req.json();
-    const parseResult = itemSchema.safeParse(body);
-    if (!parseResult.success) {
-      console.log(parseResult.error);
-      return NextResponse.json({ error: "Invalid Input" }, { status: 400 });
-    }
-    await db.items.create({ data: { ...parseResult.data } });
-    return NextResponse.json({ success: true }, { status: 201 });
-  } catch (error: any) {
-    console.error(error);
-  }
-}
+//adding more data to the database
+
+// export async function POST(req: Request) {
+//   try {
+//     console.log(data);
+//     await db.items.createMany({ data: [...data] });
+//     return NextResponse.json({ success: true }, { status: 201 });
+//   } catch (error: any) {
+//     console.error(error);
+//   }
+// }

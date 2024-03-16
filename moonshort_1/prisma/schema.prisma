@@ -8,18 +8,19 @@ datasource db {
 }
 
 model User {
-    id        Int      @id @default(autoincrement())
-    name      String   @unique
-    email     String   @unique
-    password  String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    itmes     Items[]
+    id           Int      @id @default(autoincrement())
+    name         String   @unique
+    email        String   @unique
+    password     String
+    refreshtoken String
+    createdAt    DateTime @default(now())
+    updatedAt    DateTime @updatedAt
+    itmes        Items[]
 }
 
 model Items {
     id        Int      @id @default(autoincrement())
-    name      String   @unique
+    name      String
     check     Boolean
     User      User?    @relation(fields: [userId], references: [id])
     userId    Int?
