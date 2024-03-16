@@ -5,8 +5,9 @@ import { data } from "@/utils/faker";
 export async function GET() {
   try {
     const items = await db.items.findMany();
-    return NextResponse.json({ data: items }, { status: 200 });
-  } catch (error: any) {
+    const updatedItems = items.sort((a, b) => a.id - b.id);
+    return NextResponse.json(updatedItems, { status: 200 });
+  } catch (error: unknown) {
     console.error(error);
   }
 }
@@ -18,7 +19,7 @@ export async function GET() {
 //     console.log(data);
 //     await db.items.createMany({ data: [...data] });
 //     return NextResponse.json({ success: true }, { status: 201 });
-//   } catch (error: any) {
+//   } catch (error: unknown) {
 //     console.error(error);
 //   }
 // }

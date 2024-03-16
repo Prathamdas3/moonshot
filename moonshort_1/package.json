@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "build": "next build",
     "db:push": "prisma db push",
