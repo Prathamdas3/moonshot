@@ -29,7 +29,7 @@ export async function POST(req: Request) {
       },
     });
     return NextResponse.json({ success: true }, { status: 201 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Problem in User creation", error);
   }
 }
