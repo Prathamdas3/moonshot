@@ -1,10 +1,21 @@
 import axios from "axios";
-
-export async function getItems() {
+type dataType = {
+  data: returnType[];
+};
+export type returnType = {
+  id: number;
+  name: string;
+  check: boolean;
+  userId: number;
+};
+export async function getItems(): Promise<returnType[] | undefined> {
   try {
-    const { data } = await axios.get("/api/v1/items");
+    const { data } = await axios.get<dataType>(
+      "http://localhost:3000/api/v1/items",
+    );
+
     return data;
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
   }
 }
