@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-height {
+  min-height: calc(100vh - 136px);
+}
