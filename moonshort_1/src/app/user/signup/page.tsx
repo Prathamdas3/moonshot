@@ -21,6 +21,7 @@ export default function SignUp() {
   const onSubmit = async (data: UserSchemaType) => {
     try {
       // const totalData = { ...data };
+      console.log(data);
 
       form.reset();
       router.push("/user/verification");
