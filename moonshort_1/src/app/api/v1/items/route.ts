@@ -1,6 +1,6 @@
 import { db } from "@/server/db";
 import { NextResponse } from "next/server";
-import { data } from "@/utils/faker";
+// import { data } from "@/utils/faker";
 
 export async function GET() {
   try {

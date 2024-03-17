@@ -12,7 +12,7 @@ export async function PATCH(
   try {
     const { check } = (await req.json()) as reqType;
     const id = Number(params.id);
-    const item = await db.items.update({
+     await db.items.update({
       where: { id },
       data: { check },
     });

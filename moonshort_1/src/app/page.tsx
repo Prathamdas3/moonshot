@@ -35,7 +35,11 @@ export default async function Home({
           My saved interests!
         </h4>
         <DataSection data={entries} />
-        <Pagination pages={page_count} next={end<data?.length} previous={start>0} />
+        <Pagination
+          pages={page_count}
+          next={end < (data?.length ?? 0)}
+          previous={start > 0}
+        />
       </div>
     </main>
   );

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { UserSchemaType, userSchema } from "@/utils/zodSchema";
+import { type UserSchemaType, userSchema } from "@/utils/zodSchema";
 import { useRouter } from "next/navigation";
 
 export default function SignUp() {
@@ -20,11 +20,11 @@ export default function SignUp() {
 
   const onSubmit = async (data: UserSchemaType) => {
     try {
-      const totalData = { ...data };
+      // const totalData = { ...data };
 
       form.reset();
       router.push("/user/verification");
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
     }
   };
