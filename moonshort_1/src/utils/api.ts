@@ -1,7 +1,5 @@
 import axios from "axios";
-type dataType = {
-  data: returnType[];
-};
+
 export type returnType = {
   id: number;
   name: string;
@@ -10,7 +8,7 @@ export type returnType = {
 };
 export async function getItems(): Promise<returnType[] | undefined> {
   try {
-    const { data } = await axios.get<dataType>(
+    const { data } = await axios.get<returnType[]>(
       "http://localhost:3000/api/v1/items",
     );
 

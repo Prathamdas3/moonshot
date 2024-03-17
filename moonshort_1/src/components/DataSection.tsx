@@ -1,5 +1,5 @@
 "use client";
-import { returnType } from "@/utils/api";
+import { type returnType } from "@/utils/api";
 import { useState } from "react";
 import axios from "axios";
 
@@ -21,6 +21,7 @@ export default function DataSection({
       `http://localhost:3000/api/v1/items/${updateCheck.id}`,
       { check: updateCheck.check },
     );
+    console.log(res);
   }
 
   return (
