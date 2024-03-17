@@ -16,9 +16,8 @@ export default function Pagination({
   next: boolean;
   previous: boolean;
 }) {
-    const 
   const arr: number[] = [];
-  for (let i = 1; i <= pages / 2; i++) {
+  for (let i = 1; i <= pages; i++) {
     arr.push(i);
   }
 
@@ -54,7 +53,7 @@ export default function Pagination({
             {e}
           </p>
         ))}
-        ...
+
         <button
           onClick={() =>
             router.push(`/?page=${Number(page) + 1}&per_page=${per_page}`)

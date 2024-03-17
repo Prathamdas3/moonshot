@@ -9,7 +9,7 @@ type user = {
 };
 export async function POST(req: Request) {
   try {
-    const body: user = await req.json();
+    const body= await req.json() as user;
 
     const parseResult = userSchema.safeParse(body);
     if (!parseResult.success) {
