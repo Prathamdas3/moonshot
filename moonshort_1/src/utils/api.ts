@@ -8,9 +8,7 @@ export type returnType = {
 };
 export async function getItems(): Promise<returnType[] | undefined> {
   try {
-    const { data } = await axios.get<returnType[]>(
-      "http://localhost:3000/api/v1/items",
-    );
+    const { data } = await axios.get<returnType[]>("/api/v1/items");
 
     return data;
   } catch (error: unknown) {
