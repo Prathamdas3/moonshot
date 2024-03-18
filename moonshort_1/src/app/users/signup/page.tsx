@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type UserSchemaType, userSchema } from "@/utils/zodSchema";
 import { useRouter } from "next/navigation";
+import { type returnUser } from "@/app/api/users/signup/route";
+import axios from "axios";
 
 export default function SignUp() {
   const router = useRouter();
@@ -20,13 +22,12 @@ export default function SignUp() {
 
   const onSubmit = async (data: UserSchemaType) => {
     try {
-      // const totalData = { ...data };
-      console.log(data);
+      await axios.post<returnUser>("/api/users/signup", data);
 
       form.reset();
-      router.push("/user/verification");
+      router.push("/users/verification");
     } catch (error: unknown) {
-      console.error(error);
+      console.error("Signup Failed", error);
     }
   };
 
@@ -48,7 +49,7 @@ export default function SignUp() {
           </label>
           <input
             placeholder="Enter"
-            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4"
+            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4 outline-none"
             id="Name"
             type="text"
             {...form.register("name")}
@@ -63,7 +64,7 @@ export default function SignUp() {
           </label>
           <input
             placeholder="Enter"
-            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4"
+            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4 outline-none"
             id="Email"
             type="text"
             {...form.register("email")}
@@ -78,19 +79,22 @@ export default function SignUp() {
           </label>
           <input
             placeholder="Enter"
-            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4"
+            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4 outline-none"
             id="password"
             type="text"
             {...form.register("password")}
           />
         </div>
 
-        <button className="mb-4 mt-2 h-[56px] w-[456px] rounded-md border bg-black text-base font-medium leading-[19.36px] tracking-[0.07rem] text-white">
+        <button
+          disabled={form.formState.isSubmitting}
+          className="mb-4 mt-2 h-[56px] w-[456px] rounded-md border bg-black text-base font-medium leading-[19.36px] tracking-[0.07rem] text-white"
+        >
           CREATE ACCOUNT
         </button>
         <p className=" text-base font-normal leading-[19.36px] text-[#333333]">
           Have an Account?
-          <Link className="p-1 text-black" href="/user/login">
+          <Link className="p-1 text-black" href="/users/login">
             LOGIN
           </Link>
         </p>

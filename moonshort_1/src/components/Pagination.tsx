@@ -32,14 +32,14 @@ export default function Pagination({
       <div className="flex items-center gap-1">
         <button
           disabled={!previous}
-          onClick={() => router.push(`/?page=${1}&per_page=${per_page}`)}
+          onClick={() => router.push(`/items?page=${1}&per_page=${per_page}`)}
         >
           <ChevronsLeft color="#ACACAC" />
         </button>
         <button
           disabled={!previous}
           onClick={() =>
-            router.push(`/?page=${Number(page) - 1}&per_page=${per_page}`)
+            router.push(`/items?page=${Number(page) - 1}&per_page=${per_page}`)
           }
         >
           <ChevronLeft color="#ACACAC" />
@@ -48,7 +48,7 @@ export default function Pagination({
           <p
             key={e}
             className={`${Number(page) === e ? "text-black" : "text-[#ACACAC] "} hover cursor-pointer `}
-            onClick={() => router.push(`/?page=${e}&per_page=${per_page}`)}
+            onClick={() => router.push(`/items?page=${e}&per_page=${per_page}`)}
           >
             {e}
           </p>
@@ -56,7 +56,7 @@ export default function Pagination({
 
         <button
           onClick={() =>
-            router.push(`/?page=${Number(page) + 1}&per_page=${per_page}`)
+            router.push(`/items?page=${Number(page) + 1}&per_page=${per_page}`)
           }
         >
           <ChevronRight color="#ACACAC" />
@@ -64,7 +64,7 @@ export default function Pagination({
         <button
           disabled={!next}
           onClick={() =>
-            router.push(`/?page=${arr.length}&per_page=${per_page}`)
+            router.push(`/items?page=${arr.length}&per_page=${per_page}`)
           }
         >
           <ChevronsRight color="#ACACAC" />

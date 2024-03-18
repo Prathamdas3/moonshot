@@ -1,5 +1,5 @@
 "use client";
-import { type returnType } from "@/utils/api";
+import { type returnType } from "@/app/items/page";
 import { useState } from "react";
 import axios from "axios";
 
@@ -17,11 +17,12 @@ export default function DataSection({
   );
 
   if (updateCheck !== undefined) {
-    const res = axios.patch(
-      `http://localhost:3000/api/v1/items/${updateCheck.id}`,
-      { check: updateCheck.check },
-    );
-    console.log(res);
+    axios
+      .patch(`/api/items/${updateCheck.id}`, {
+        check: updateCheck.check,
+      })
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -33,7 +34,7 @@ export default function DataSection({
             id={name}
             name={name}
             checked={check}
-            className={` h-6 w-6 rounded-[4px] border-2 border-black ${check ? "bg-black" : "bg-[#CCCCCC]"}`}
+            className={`:not(:checked) h-6 w-6 rounded-[4px] border-2 bg-[#CCCCCC] accent-black `}
             onChange={() => setUpDateCheck({ check: !check, id })}
           />
           <label

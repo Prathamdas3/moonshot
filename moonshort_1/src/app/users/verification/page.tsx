@@ -8,7 +8,7 @@ export default function Verification() {
 
         <p className="mb-[14px] text-center indent-1 text-base font-normal leading-[19.36px]">
           Enter the 8 digit code you have received on
-          <span className="font-medium">swa***@gmail.com</span>
+          <span className="font-medium"> swa***@gmail.com</span>
         </p>
 
         <div className="mb-8 flex flex-col">
