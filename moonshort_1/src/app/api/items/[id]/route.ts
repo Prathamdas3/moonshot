@@ -12,12 +12,13 @@ export async function PATCH(
   try {
     const { check } = (await req.json()) as reqType;
     const id = Number(params.id);
-     await db.items.update({
+    await db.items.update({
       where: { id },
       data: { check },
     });
 
-    revalidatePath("");
+    revalidatePath("/items");
+
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error: unknown) {
     console.error(error);
