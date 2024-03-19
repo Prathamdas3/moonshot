@@ -22,10 +22,9 @@ export default function SignUp() {
 
   const onSubmit = async (data: UserSchemaType) => {
     try {
-      await axios.post<returnUser>("/api/users/signup", data);
-
+      const res = await axios.post<returnUser>("/api/users/signup", data);
       form.reset();
-      router.push("/users/verification");
+      router.push(`/users/verification/${res.data.user}`);
     } catch (error: unknown) {
       console.error("Signup Failed", error);
     }

@@ -7,6 +7,7 @@ export async function GET() {
       success: true,
     });
     res.cookies.set("token", "", { httpOnly: true, expires: new Date(0) });
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (error: unknown) {
     return NextResponse.json({ error: error }, { status: 500 });
   }
