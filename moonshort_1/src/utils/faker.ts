@@ -15,3 +15,8 @@ export const data = (() => {
 
   return data;
 })();
+
+export const otp = (() => {
+  const otp: string = faker.string.uuid().slice(0, 8).toLowerCase();
+  return otp;
+})();
