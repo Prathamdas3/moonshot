@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const items = await db.items.findMany();
 
-    const updatedItems = items.sort((a, b) => a.id - b.id);
+    const updatedItems = items.sort((a, b) => a.id - b.id).slice(0, 100);
 
     return NextResponse.json(updatedItems, { status: 200 });
   } catch (error: unknown) {
@@ -16,9 +16,11 @@ export async function GET() {
 
 //adding more data to the database
 
-export async function POST() {
+export async function POST(req: Request) {
   try {
-    await db.items.createMany({ data: [...data] });
+    const { id } = (await req.json()) as { id: number };
+    const body = await data(id);
+    await db.items.createMany({ data: [...body] });
     return NextResponse.json({ success: true }, { status: 201 });
   } catch (error: unknown) {
     console.error(error);

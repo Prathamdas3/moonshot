@@ -28,7 +28,7 @@ export default function Verification() {
       await axios.post(`/api/users/verifyemail/${id}`, {
         token: tokenValue,
       });
-      await axios.post(`/api/items`);
+      await axios.post(`/api/items`, { id: Number(id) });
       router.push("/items");
     } catch (error: unknown) {
       console.error(error);
