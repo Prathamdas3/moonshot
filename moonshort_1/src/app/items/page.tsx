@@ -1,7 +1,7 @@
 import DataSection from "@/components/DataSection";
 
 import Pagination from "@/components/Pagination";
-import axios from "axios";
+import { apiClient } from "@/utils/axios";
 
 export type returnType = {
   id: number;
@@ -17,9 +17,11 @@ export default async function Items({
 }) {
   const getItems = async () => {
     try {
-      const { data } = await axios.get<returnType[]>(
-        "http://localhost:3000/api/items",
-      );
+      const { data } = await apiClient.get<returnType[]>("/api/items", {
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
       return data;
     } catch (error: unknown) {
       console.error(error);

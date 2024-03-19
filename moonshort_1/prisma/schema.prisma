@@ -8,15 +8,15 @@ datasource db {
 }
 
 model User {
-    id                Int       @id @default(autoincrement())
-    name              String    @unique
-    email             String    @unique
+    id                Int      @id @default(autoincrement())
+    name              String   @unique
+    email             String   @unique
     password          String
-    isVerfied         Boolean   @default(false)
-    verifyToken       String?
-    verifyTokenExpiry DateTime?
-    createdAt         DateTime  @default(now())
-    updatedAt         DateTime  @updatedAt
+    isVerfied         Boolean  @default(false)
+    verifyToken       String   @default("")
+    verifyTokenExpiry BigInt?  @default(0)
+    createdAt         DateTime @default(now())
+    updatedAt         DateTime @updatedAt
     itmes             Items[]
 }
 
