@@ -55,6 +55,7 @@ export default function Pagination({
         ))}
 
         <button
+          disabled={!next}
           onClick={() =>
             router.push(`/items?page=${Number(page) + 1}&per_page=${per_page}`)
           }
