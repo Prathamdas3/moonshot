@@ -7,8 +7,10 @@ import { type UserSchemaType, userSchema } from "@/utils/zodSchema";
 import { useRouter } from "next/navigation";
 import { type returnUser } from "@/app/api/users/signup/route";
 import axios from "axios";
+import { useState } from "react";
 
 export default function SignUp() {
+  const [passwordType, setPasswordType] = useState<boolean>(true);
   const router = useRouter();
 
   const form = useForm<UserSchemaType>({
@@ -76,13 +78,24 @@ export default function SignUp() {
           >
             Password
           </label>
-          <input
-            placeholder="Enter"
-            className="h-[48px] w-[456px] rounded-md border border-[#C1C1C1] p-4 outline-none"
-            id="password"
-            type="text"
-            {...form.register("password")}
-          />
+          <div className="flex h-[48px] w-[456px] items-center justify-between rounded-md border border-[#C1C1C1] p-4 outline-black">
+            <input
+              placeholder="Enter"
+              className="flex-auto outline-none"
+              id="password"
+              type={passwordType ? "password" : "text"}
+              {...form.register("password")}
+            />
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                e.preventDefault();
+                setPasswordType(!passwordType);
+              }}
+              className="inline "
+            >
+              {passwordType ? "show" : "hide"}
+            </button>
+          </div>
         </div>
 
         <button
