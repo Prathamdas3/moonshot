@@ -18,13 +18,14 @@ This is built with the following technologies:
 
 Here is my version of this project:
 
-- login page
+- Login page
   ![login page](/public/demo/login.png)
 
-- signup page
+- Signup page
   ![signup page](/public/demo/signup.png)
 
-- verification page
+- Verification page
   ![verification page](/public/demo/verification.png)
-- verification page
-  ![verification page](/public/demo/verification.png)
+
+- Items page
+  ![verification page](/public/demo/items.png)
