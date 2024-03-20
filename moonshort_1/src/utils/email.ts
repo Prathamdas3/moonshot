@@ -9,6 +9,7 @@ export const sendEmail = async ({
 }) => {
   try {
     const transport = nodemailer.createTransport({
+      service: "gmail",
       host: process.env.MAILTRAP_HOST!,
       port: process.env.MAILTRAP_PORT!,
       auth: {
