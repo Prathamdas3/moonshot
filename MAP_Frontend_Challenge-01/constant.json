@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Shibuya Crossing Chaos",
+    "description": "The organized chaos of Shibuya Crossing in Tokyo, where thousands of people cross paths in the heart of the city.",
+    "tag": "Recommended",
+    "image": "./SamplePic01.webp"
+  },
+  {
+    "id": 2,
+    "title": "Rainbow Stairs of China",
+    "description": "The colorful rainbow stairs in China, adding a vibrant splash of color to the urban landscape and inviting exploration.",
+    "tag": "",
+    "image": "./SamplePic02.webp"
+  },
+  {
+    "id": 3,
+    "title": "Skyline of Shanghai",
+    "description": "A breathtaking view of Shanghai's skyline with the iconic Oriental Pearl Tower standing tall amidst the bustling cityscape.",
+    "tag": "Trending",
+    "image": "./SamplePic03.webp"
+  },
+  {
+    "id": 4,
+    "title": "Kuala Lumpur's Twin Towers",
+    "description": "The skyline of Kuala Lumpur featuring the iconic Petronas Twin Towers, a symbol of Malaysia's progress and ambition.",
+    "tag": "Recommended",
+    "image": "./SamplePic04.webp"
+  },
+  {
+    "id": 5,
+    "title": "Beijing's Modern Marvels",
+    "description": "Contemporary buildings in Beijing blend with traditional elements, reflecting the city's rich history and rapid modernization.",
+    "tag": "",
+    "image": "./SamplePic05.webp"
+  },
+  {
+    "id": 6,
+    "title": " Guangzhou's Urban Landscape",
+    "description": "A panoramic view of Guangzhou, highlighting its impressive skyscrapers and the Pearl River running through the city.",
+    "tag": "Recommended",
+    "image": "./SamplePic06.webp"
+  },
+  {
+    "id": 7,
+    "title": "Modern Guangzhou",
+    "description": "The modern skyline of Guangzhou, featuring innovative architectural designs and the iconic Canton Tower",
+    "tag": "",
+    "image": "./SamplePic07.webp"
+  },
+  {
+    "id": 8,
+    "title": "Osaka Castle  ",
+    "description": "The majestic Osaka Castle standing proudly amidst modern buildings, a testament to Japan's historical and cultural heritage",
+    "tag": "Trending",
+    "image": "./SamplePic08.webp"
+  },
+  {
+    "id": 9,
+    "title": "Hong Kong High-Rises",
+    "description": "The towering skyscrapers of Hong Kong rise majestically, symbolizing the city's economic power and architectural prowess",
+    "tag": "Trending",
+    "image": "./SamplePic09.webp"
+  },
+  {
+    "id": 10,
+    "title": "Night Lights of Tokyo",
+    "description": "The vibrant night lights of Tokyo illuminate the city, showcasing its dynamic energy and modern architecture",
+    "tag": "",
+    "image": "./SamplePic10.webp"
+  },
+  {
+    "id": 11,
+    "title": "Tokyo's Urban Landscape",
+    "description": " Tokyo's sprawling urban landscape, showcasing a blend of cutting-edge architecture and traditional elements.",
+    "tag": "Recommended",
+    "image": "./SamplePic11.webp"
+  },
+  {
+    "id": 12,
+    "title": " Star-Shaped Architectural Marvel",
+    "description": "An impressive star-shaped building showcasing innovative design and engineering, standing as a unique landmark in the urban landscape.",
+    "tag": "",
+    "image": "./SamplePic12.webp"
+  },
+  {
+    "id": 13,
+    "title": " Tranquil Japanese Shrine",
+    "description": "A peaceful Japanese shrine nestled amidst nature, offering a serene retreat from the bustling city life.",
+    "tag": "Recommended",
+    "image": "./SamplePic13.webp"
+  },
+  {
+    "id": 14,
+    "title": "Tokyo Tower Illuminated",
+    "description": "Tokyo Tower bathed in the warm hues of sunset, offering a picturesque view of one of Japan's most famous landmarks",
+    "tag": "",
+    "image": "./SamplePic14.webp"
+  },
+  {
+    "id": 15,
+    "title": "Timeless Grand Clock Tower",
+    "description": "A majestic building featuring a large clock, serving as a prominent city landmark. The intricate clock face and elegant architecture symbolize the timeless beauty and heritage of the city",
+    "tag": "Recommended",
+    "image": "./SamplePic15.webp"
+  },
+  {
+    "id": 16,
+    "title": "Enigmatic Twins in the Mist",
+    "description": "A foggy view of the iconic twin towers, their silhouettes shrouded in mist. The mysterious ambiance adds an ethereal quality, highlighting the towers' grandeur and presence even in low visibility.",
+    "tag": "Trending",
+    "image": "./SamplePic16.webp"
+  },
+  {
+    "id": 17,
+    "title": "Urban Jungle of Singapore",
+    "description": "A unique blend of urban skyscrapers and lush greenery in Singapore, exemplifying a harmonious coexistence with nature.",
+    "tag": "Recommended",
+    "image": "./SamplePic17.webp"
+  },
+  {
+    "id": 18,
+    "title": "Afternoon Glory: Twin Towers",
+    "description": "The twin towers basking in the afternoon sun, their sleek facades gleaming against the bright sky. The clear daylight accentuates their architectural magnificence and prominence in the city skyline.",
+    "tag": "",
+    "image": "./SamplePic18.webp"
+  },
+  {
+    "id": 19,
+    "title": " Mountain Hut Serenity",
+    "description": "A quaint hut nestled in the mountains, offering a peaceful retreat surrounded by stunning natural beauty and fresh, crisp air",
+    "tag": "Recommended",
+    "image": "./SamplePic19.webp"
+  },
+  {
+    "id": 20,
+    "title": "Futuristic Shenzhen",
+    "description": "Shenzhen's skyline, characterized by its futuristic architecture and rapid development as a major tech hub in China.",
+    "tag": "",
+    "image": "./SamplePic20.webp"
+  }
+]
