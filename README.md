@@ -5,3 +5,5 @@
 
 - [map-frontend](https://map-frontend-challenge-one.vercel.app)
 
+- [chat-pwa](https://chats-pwa.vercel.app)
+
