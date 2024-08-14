@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply container flex flex-col items-center justify-center min-h-screen bg-slate-900;
+}
